@@ -13,3 +13,5 @@ Imports: matrixStats, fs, readr, writexl
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+URL: https://github.com/wayneliuq/wmisc
+BugReports: https://github.com/wayneliuq/wmisc/issues
