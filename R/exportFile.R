@@ -40,7 +40,6 @@ exportFile <- function(
 ) {
 
   ## check and convert output directory
-  ## later update this using package::fs
 
   if (!is.null(dir) & substring(dir, nchar(dir)) != "/") {
     dir <- paste0(dir, "/")
