@@ -7,6 +7,7 @@
 #'
 #' @param x a numeric vector. Geometric mean can only be calculated for positive numbers.
 #' @param na.rm If TRUE, any missing values are ignored, otherwise not.
+#' @param lx a numeric matrix.
 #'
 #' @export
 geomean <- function(x, na.rm = T) {

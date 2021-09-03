@@ -16,6 +16,8 @@ colGeomean(lx, na.rm = T)
 \item{x}{a numeric vector. Geometric mean can only be calculated for positive numbers.}
 
 \item{na.rm}{If TRUE, any missing values are ignored, otherwise not.}
+
+\item{lx}{a numeric matrix.}
 }
 \description{
 Geometric mean is a robust measure of central tendency. This function introduces a
