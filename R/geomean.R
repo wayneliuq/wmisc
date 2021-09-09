@@ -18,12 +18,12 @@ geomean <- function(x, na.rm = T) {
 #' @rdname geomean
 rowGeomean <- function(lx, na.rm = T) {
   if (any(lx <= 0)) {stop("geometric mean can only be performed on matrices of positive numbers!")}
-  exp(matrixStats::rowSums2(log(lx), na.rm = na.rm) / nrow(lx))
+  exp(matrixStats::rowSums2(log(lx), na.rm = na.rm) / ncol(lx))
 }
 
 #' @export
 #' @rdname geomean
 colGeomean <- function(lx, na.rm = T) {
   if (any(lx <= 0)) {stop("geometric mean can only be performed on matrices of positive numbers!")}
-  exp(matrixStats::colSums2(log(lx), na.rm = na.rm) / ncol(lx))
+  exp(matrixStats::colSums2(log(lx), na.rm = na.rm) / nrow(lx))
 }
