@@ -1,3 +1,25 @@
+#' Exporting a graphic figure
+#'
+#' @description
+#' This function provides a simple interface to export figures generated in R to multiple formats.
+#'
+#' @param figure the graphics to be exported.
+#' @param filename a string which the name of the figure to be exported
+#' @param widthpx an integer which specifies the width of the exported figure in pixels
+#' @param heightpx an integer which specifies the height of the exported figure in pixels
+#' @param res an integer which specifies the resolution of the exported figure for png.
+#' @param format a character vector which specifies the exported format(s). Currently supports "png" and "pdf".
+#' @param dir a character string which specifies the directory that the figure will be exported, relative to
+#' the current working directory. If the directory does not exist, it will be created.
+#' @param prefix a character string which specifies the time of prefix. "date" specifies the current date, "time" prefixes
+#' both the date and time to the filename, and NULL removes the prefix altogether.
+#' @param replace a logical value. If set to TRUE,  files with the same file name will be overwritten on export. If set to FALSE,
+#' the software will check for duplicate filenames and append a padded integer to the filename to avoid overwriting.
+#'
+#' @return
+#' @export
+#'
+#' @examples
 exportFig <- function(figure,
                       filename = "figure",
                       widthpx = 1920,
