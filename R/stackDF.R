@@ -15,7 +15,7 @@
 stackDF <- function(df, index = 1) {
 
   ## check before start
-  if (ncol(df < 3)) {
+  if (ncol(df) < 3) {
     stop("data.frame to be stacked should have more than 2 columns!")
   }
 
