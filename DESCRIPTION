@@ -1,7 +1,7 @@
 Package: wmisc
 Type: Package
 Title: Wayne's Misc Helper Function
-Version: 0.1.0
+Version: 0.5.0
 Author: Qiang (Wayne) Liu
 Maintainer: Qiang (Wayne) <wayneliuq@gmail.com>
 Description: This package wraps a series of miscellaneous helper functions that supplement data exporting and analysis.
