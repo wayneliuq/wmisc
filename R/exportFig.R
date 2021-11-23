@@ -30,6 +30,8 @@ exportFig <- function(figure,
                       prefix = "date",
                       replace = F) {
 
+  format <- match.arg(format, several.ok = T)
+
   ## check and convert output directory
 
   if (!is.null(dir) & substring(dir, nchar(dir)) != "/") {
