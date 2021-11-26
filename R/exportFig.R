@@ -18,8 +18,6 @@
 #'
 #' @return
 #' @export
-#'
-#' @examples
 exportFig <- function(figure,
                       filename = "figure",
                       widthpx = 1920,

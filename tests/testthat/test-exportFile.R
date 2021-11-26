@@ -13,7 +13,7 @@ test_that("1. matrix exports successfully", {
     xlsx = "export/matrix.xlsx"
   ))
 
-  exportFile(x, filename = "matrix", dir = "export", prefix = NULL)
+  exportFile(x, filename = "matrix", dir = "export", prefix = "none")
 
   ## export a data.frame
   set.seed(20210903); y <- data.frame(
@@ -29,7 +29,7 @@ test_that("1. matrix exports successfully", {
     xlsx = "export/df.xlsx"
   ))
 
-  exportFile(y, filename = "df", dir = "export", prefix = NULL)
+  exportFile(y, filename = "df", dir = "export", prefix = "none")
 
   ## exported as different formats
   expect_equal(as.logical(fs::file_exists(expected_1_matrix)), c(T, T, T))

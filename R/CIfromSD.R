@@ -7,7 +7,6 @@
 #'
 #' @return returns the lower and upper boundaries of the confidence interval
 #' @export
-#'
 CIfromSD <- function(mean, sd, n, alpha = 0.95) {
   chip <- 1- ((1 - alpha) / 2)
   error <- qt(chip, df = n - 1) * sd / sqrt(n)

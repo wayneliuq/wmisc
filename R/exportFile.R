@@ -33,11 +33,15 @@
 exportFile <- function(
   object,
   filename = "table",
-  prefix = "date",
+  prefix = c("date", "time", "none"),
   file_format = c("tsv", "csv", "xlsx"),
   dir = "output/",
   replace = F
 ) {
+
+  ## match args
+  prefix <- match.arg(prefix, several.ok = F)
+  file_format <- match.arg(file_format, several.ok = T)
 
   ## check and convert output directory
 
@@ -60,14 +64,14 @@ exportFile <- function(
 
   ## set prefix time with EST timezone
 
-  if (is.null(prefix)) {
+  if (prefix == "none") {
     prefix_time <- NULL
-  } else if (any(grep(pattern = paste0("^", prefix), "date"))) {
+  } else if (prefix == "date") {
     prefix_time <- paste0(format(Sys.time(), format = "%F", tz = "EST"), "_")
-  } else if (any(grep(pattern = paste0("^", prefix), "time"))) {
+  } else if (prefix == "time") {
     prefix_time <- paste0(format(Sys.time(), format = "%F_%H%M%S", tz = "EST"), "_")
   } else {
-    stop("'prefix' must be either set as either 'date', 'time', or NULL!")
+    stop("'prefix' must be one of 'date', 'time', or NULL!")
   }
 
   ## create file names

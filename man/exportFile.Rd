@@ -7,7 +7,7 @@
 exportFile(
   object,
   filename = "table",
-  prefix = "date",
+  prefix = c("date", "time", "none"),
   file_format = c("tsv", "csv", "xlsx"),
   dir = "output/",
   replace = F

@@ -1,4 +1,4 @@
-source("renv/activate.R")
+# source("renv/activate.R")
 
 options(
   usethis.full_name = "Qiang Liu",
